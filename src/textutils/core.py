@@ -1,4 +1,4 @@
-def word_count(text: str) -> dict:
+def word_count(text):
     import re
     from collections import Counter
     text = text.lower()
@@ -7,13 +7,12 @@ def word_count(text: str) -> dict:
     return dict(counts)
 
 def top_n(counts, n):
-    return sorted(counts.items(), key=lambda x: (-x[1], x[0]))[:n]
+    return sorted(counts.items(), key=lambda x: x[1], reverse=True)[:n]
 
 def normalize_whitespace(text):
     import re
-    return re.sub(r'\s+', ' ', text).strip()
+    return re.sub(r'\s+', ' ', text.strip())
 
-import string
 def remove_punctuation(text):
     import string
     translator = str.maketrans('', '', string.punctuation)
@@ -25,6 +24,9 @@ def is_palindrome(text):
 
 def count_sentences(text):
     import re
-    # This pattern matches a sentence ending with one or more . ! ?
     sentences = re.findall(r'[^.!?]+[.!?]+', text)
     return len(sentences)
+
+def normalize_unicode(text):
+    import unicodedata
+    return unicodedata.normalize('NFC', text)
