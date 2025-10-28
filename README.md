@@ -50,3 +50,8 @@ pytest --cov=src/textutils --cov-report=term-missing
 - Ferdinand Rasmussen
 - Mara Rusen
 - Abhay Mathahalli
+
+## Project Description
+
+This package was collaboratively developed by Team 8 for the ESADE Python for Data Science course. Our approach emphasized version control best practices: we started by individually implementing core features on separate branches, then handled integration and conflict resolution as a team. In the later stages, we focused on team-based code review, comprehensive testing, and consistent documentation. The resulting package is structured for clarity, easy extension, and robust text processing, reflecting both individual initiative and group collaboration.
+ 
