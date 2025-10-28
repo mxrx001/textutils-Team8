@@ -1,10 +1,3 @@
-import re
-
-def normalize_whitespace(text: str) -> str:
-    if text is None:
-        return ""
-    collapsed = re.sub(r"\s+", " ", text)
-    return collapsed.strip()
 def word_count(text: str) -> dict:
     import re
     from collections import Counter
@@ -19,3 +12,8 @@ def top_n(counts, n):
 def normalize_whitespace(text):
     import re
     return re.sub(r'\s+', ' ', text).strip()
+
+def remove_punctuation(text):
+    import string
+    translator = str.maketrans('', '', string.punctuation)
+    return text.translate(translator)
