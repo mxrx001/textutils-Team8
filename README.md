@@ -49,7 +49,9 @@ pytest --cov=src/textutils --cov-report=term-missing
 - Amat Montoto
 - Ferdinand Rasmussen
 - Mara Rusen
-- Abhay Mathahalli
+- Abhay Mathahalli ([@abhaymathahalli1851](https://github.com/abhaymathahalli1851))
+
+
 
 ## Project Description
 
